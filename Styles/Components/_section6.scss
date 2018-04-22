@@ -1,0 +1,103 @@
+.section6 {
+    background: #fafafa;
+    .wrapper {
+        padding-top: 180px;
+        position: relative; /* For section__title:after  */
+    }
+    .section__h2--dark {
+        margin: 0;
+    }
+    .section__paragraph--italic {
+        margin: 0;
+    }
+    .section__title:after {
+        content: '';
+            background: $pink;
+            width: 63px;
+            height: 1px;
+            position: absolute;
+            top: 295px;
+            left: 50%;
+            transform: translateX(-50%);
+    }
+    .section6-container {
+        display: flex;
+        margin-top: 95px;
+        aside {
+            width: 24%;
+            ul {
+                margin-top: 50px;
+                li {
+                    position: relative;
+                }
+                list-style: none;
+                background: white;
+                border: 1px solid #ececec;
+                padding: 0px;
+                .aside__list__list-item__paragraph--small {
+                    margin: 0;
+                    color: #b7b7b7;
+                    padding: 25px 0 0 20px;
+                    font-weight: 300;
+                    letter-spacing: -1px;
+                }
+                .aside__list__list-item--paragraph--large {
+                    padding: 0 0 25px 20px;
+                    margin: 0;
+                }
+                li:after {
+                    content: '';
+                    background:#ececec;
+                    height: 1px;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                li:hover {
+                    background: $pink;
+                    color: white;
+                }
+            }
+        }
+        .section6-main {
+            width: 66%;
+            margin: 0 auto;
+            .box {
+                display: flex;
+                .text-container {
+                    margin-left: 30px;
+                    .name-time-container {
+                        display: flex;
+                        .section__paragraph--dark {
+                            margin:0 0 0 20px;
+                        }
+                        .section__paragraph--bold {
+                            margin: 0;
+                        }
+                    }
+                    .section__paragraph--large {
+                        margin: 15px 0;
+                    }
+                    .section__paragraph--light {
+                        margin: 0 0 60px 0;
+                    }
+                }
+                img {
+                    height: 110px;
+                    width: 110px;
+                    border-radius: 50%;
+                    border: 8px solid #ececec;
+                    position: relative;
+                }
+                &:before {
+                    content: '';
+                    background: red;
+                    height: 1px;
+                    width: 100px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

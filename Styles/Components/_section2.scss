@@ -1,0 +1,29 @@
+.section__boxes {
+    display: flex;
+    .box {
+        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.03);
+        margin-right: 30px;
+        .box3 {
+            margin-right: 0;
+        }
+        & img {
+            display: block;
+        }
+        .section__paragraph--large {
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .box-text {
+            padding: 40px;
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: $purple;
+                }
+            }
+        }
+        
+        
+        
+    }
+}

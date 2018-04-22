@@ -1,0 +1,32 @@
+.wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.button {
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.button--pink,
+input[type=submit]  {
+    background-color: $pink; 
+    text-transform: uppercase;
+}
+
+input[type=submit] {
+    padding: 0 35px;
+    color: white;
+    border: none;
+}
+
+.button--purple {
+    background-color: $purple;
+}
+
+.section__title {
+    text-align: center;
+}

@@ -1,0 +1,91 @@
+.section5 {
+    margin-top: 210px;
+    background-image: url(../../images/pricing-image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+    min-height: 540px;
+    margin-bottom: 500px;
+    .section__title {
+        color: white;
+        padding: 140px;
+        h2 {
+            margin: 0;
+        }
+        p {
+            margin: 5px 0 0 0;
+        }
+    }
+    .wrapper {
+        position: relative;
+    }
+    .box-container {
+        display: flex;
+        background: white;
+        padding: 20px;
+        justify-content: space-between;
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.04);
+        .box {
+            background: #fafafa;
+            height: 568px;
+            text-align: center;
+            border: 1px solid #ececec;
+            position: relative; 
+            overflow: hidden;
+            .section__paragraph--best-choice {
+                position: absolute;
+                top: 15px;
+                right: -55px;
+                background: #463f8c;
+                width: 200px;
+                height: 35px;
+                color: white;
+                transform: rotate(45deg);
+                font-size: 13px;
+                font-weight: 500;
+                padding-top: 8px;;
+            }
+
+            h3 {
+                margin: 55px 0 0 0;
+            }
+            .section__paragraph--small {
+                margin: 8px 0 40px 0;
+            }
+            &:after {
+                content: '';
+                background: black;
+                height: 1px;
+                width: 34px;
+                position: absolute;
+                top: 130px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .section__paragraph--money {
+                margin: 0 0 15px 0;
+                position: relative; /* For Dollar Sign */
+                .section__paragraph--dollar-sign {
+                    position: absolute;
+                    top: 5px;
+                    left: 95px;
+                }
+            }
+            .section__paragraph--large {
+                margin: 0;
+                border-top: 1px dashed #ececec;
+                padding: 15px 60px;
+            }
+            .section__paragraph--large:last-of-type {
+                margin-bottom: 30px;
+            }
+            .button {
+                padding: 15px 45px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,47 @@
+.section1 {
+    background-color: #fafafa;
+    padding: 80px 0 85px 0;
+    box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.03);
+    height: 262px;
+
+
+    .wrapper {
+        display: flex;
+    }
+    & p {
+        margin: 0;
+    }
+    .section__paragraph--small {
+        margin-bottom: 15px;
+    }
+    .section__paragraph--large {
+            line-height: 32px;
+    }
+    .section1-middle {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        .time {
+            display: flex;
+            .section__paragraph--numbers {
+                background: $black;
+                margin-right: 2px;
+                border-radius: 3px;
+                padding: 6px 15px;
+                height: 45px;
+            }
+        }
+    }
+    .section1-right {
+        display: flex;
+        justify-content: flex-end;
+        .button {
+            height: 52px;
+            padding: 15px 50px;
+            margin: auto 0;
+            &--pink {
+                margin-left: 15px;
+            }
+        }
+    }
+}

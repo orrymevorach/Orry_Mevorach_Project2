@@ -1,0 +1,234 @@
+// General Fonts
+
+//  font-family: 'Poppins', sans-serif;
+//  font-family: 'Raleway', sans-serif;
+
+html {
+     font-family: 'Poppins', sans-serif;
+}
+
+.button {
+    color: $white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+// Title Fonts
+
+.section__h2--dark {
+    font-size: 36px;
+    font-weight: 800;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section__h2--light {
+    font-size: 36px;
+    font-weight: 800;
+    color: $white;
+    text-align: center;
+}
+
+.section__paragraph--italic {
+    font-size: 17px;
+    color: $grey;
+    font-style: italic;
+}
+
+
+
+// Header Fonts
+
+.main-nav__list__list-item a{
+    font-size: 15px;
+    font-weight: 600;
+    color: $white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header__paragraph {
+    font-size: 22px;
+    color: $white;
+    font-style: italic;
+}
+
+.header-h1 {
+    font-size: 44px;
+    font-weight: 800;
+    color: $white;
+}
+
+// Section 1 Fonts
+
+.section1 {
+    .section__paragraph--small {
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey;
+    }
+    
+    .section__paragraph--large {
+        font-size: 26px;
+        color: $black;
+        font-weight: 700;
+    }
+
+    .section__paragraph--numbers {
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+    }
+}
+
+// Section 2 Fonts
+
+.section2 {
+    .section__paragraph--large {
+    font-size: 16px;
+    font-weight: 700;
+    color: $black;
+    }
+
+.section__paragraph--small {
+    font-size: 14px;
+    color: $grey;
+    }
+
+.section__link {
+    font-size: 16px;
+    font-style: italic;
+    color: $pink;
+    }
+}
+
+// Section 3 Fonts - not required, all general fonts
+
+// Section 4
+
+.section4 {
+    .section__paragraph--large {
+         font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: $black;
+    }
+    .section__paragraph--small {
+        font-size: 13px;
+        color: $grey;
+    }
+}
+
+// Section 5 Fonts
+
+.section5 {
+    .section__h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: $black;
+    }
+    .section__paragraph--small {
+        font-size: 14px;
+        font-weight: 300;
+        color: $grey;
+    }
+    .section__paragraph--dollar-sign {
+        font-size: 26px;
+        font-weight: 300;
+        color: $black;
+    }
+    .section__paragraph--price {
+        font-size: 40px;
+        font-weight: 500;
+        color: $black;
+    }
+    .section__paragraph--large {
+        font-size: 15px;
+        color: $grey;
+        font-weight: 300;
+    }
+}
+
+// Section 6 
+
+.section6 {
+    .section__paragraph--bold {
+        font-size: 14px;
+        font-weight: 500;
+        color: $black;
+    }
+    .section__paragraph--dark {
+        font-size: 13px;
+        color: $grey;
+    }
+    .section__paragraph--large {
+        font-size: 18px;
+        font-weight: 600;
+        color: $black;
+    }
+    .section__paragraph--light {
+        font-size: 13px;
+        color: #666666;
+    }
+}
+
+// Section 7
+
+.section7 {
+    .section__h3 {
+        font-size: 30px;
+        font-weight: 700;
+        color: $white;
+    }
+    .section__paragraph--italic {
+        color: #bfbaf6;
+    }
+    .section__paragraph--small {
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+// Section 8 Fonts
+
+.section8 {
+    .section__paragraph--large {
+        font-size: 22px;
+        font-weight: 500;
+        color: $black;
+    }
+    .section__paragraph--light {
+        font-size: 13px;
+        color: $grey;
+    }
+
+    .section__paragraph--dark {
+        font-size: 13px;
+        color: #666666;
+    }
+}
+
+// Footer Fonts
+
+footer {
+    .footer__paragraph--small {
+        font-size: 14px;
+        color: #ababab;
+    }
+    .footer__nav__list__list-item {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ababab;
+        text-transform: uppercase;
+    }
+    .footer__paragraph {
+        font-size: 15px;
+        color: $white;
+    }
+}
+
+
+
+
+

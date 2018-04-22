@@ -1,0 +1,73 @@
+.section4 {
+    .section__title {
+        position: relative;
+        h2 {
+        margin: 130px 0 0 0;
+        }
+        p {
+        margin: 0 0 90px 0;
+        }
+        &:after {
+            content: '';
+            background: $pink;
+            width: 63px;
+            height: 1px;
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .box-container {
+        display: flex;
+        justify-content: space-between;
+        .box {
+            box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.03);
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            .image-container {
+                position: relative;
+                img {
+                    display: block;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+                .social-icons svg {
+                    display: none;
+                    color: white;
+                    background:  rgba(0, 0, 0, 0.55);
+                    font-size: 30px;
+                    padding: 8px;
+                    border-radius: 50%;
+                    width: 30px;
+                    position: absolute;
+                    bottom: 30px;
+                }
+                .svg-inline--fa.fa-google-plus-g {
+                    padding: 6px 4px 6px 8px;
+                    left: 30%;
+                }
+                .svg-inline--fa.fa-twitter {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .svg-inline--fa.fa-facebook-f {
+                    right: 30%;
+                } 
+                .social-icons svg:hover {
+                    background: $pink;
+                }
+            }
+            .image-container:hover .social-icons svg {
+                display: block;
+            }
+            .section__paragraph--large {
+                margin: 22px 0 0 0;
+            }
+            .section__paragraph--small {
+                margin: 0 0 22px 0;
+            }
+        }
+    }
+}
