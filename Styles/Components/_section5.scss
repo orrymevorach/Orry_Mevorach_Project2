@@ -30,7 +30,7 @@
         box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.04);
         .box {
             background: #fafafa;
-            height: 568px;
+            padding-bottom: 50px;
             text-align: center;
             border: 1px solid #ececec;
             position: relative; 
@@ -88,4 +88,50 @@
         }
     }
     
+}
+
+@media (max-width: 1085px) {
+    .section5 .box-container .box {
+        .section__paragraph--large {
+            font-size: 13px;
+            padding: 15px 40px;
+        }
+        .section__paragraph--price {
+            font-size: 27px;
+        }
+        .section__h3 {
+            font-size: 16px;
+        }
+        .button {
+            padding: 10px 25px;
+        }
+        // Responsive: Shrinking Best Choice Banner
+        .section__paragraph--best-choice {
+
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .section5 .box-container .box {
+        .section__paragraph--large {
+            font-size: 12px;
+            padding: 15px 30px;
+        }
+        .section__paragraph--price {
+            font-size: 25px;
+        }
+        .section__h3 {
+            font-size: 15px;
+        }
+        .button {
+            padding: 10px 25px;
+        }
+    }
+}
+
+@media (max-width: 505px) {
+    .section5 .box-container .box .button {
+        padding: 5px 15px;
+    }
 }

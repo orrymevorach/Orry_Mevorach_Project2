@@ -10,6 +10,10 @@
         & .section__paragraph {
             margin: 11px 0 34px 0;
         }
+        form {
+            display: flex;
+            justify-content: center;
+        }
         input[type=email] {
             background: $purple;
             border: 1px solid $white;
@@ -26,8 +30,36 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             height: 51px;
-            position: absolute;
+            position: relative;
+            left: -1px;
         }
 
     }
 }
+
+@media (max-width: 950px) {
+    .section3 .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+    .section__paragraph {
+        font-size: 12px;
+    }
+    .section3 .wrapper {
+        input[type=email] {
+            height: 40px;
+            margin: 0;
+            width: 50%;
+        }
+        input[type=submit] {
+            height: 40px;
+            padding: 0 20px;
+        }
+        form {
+            margin: 0;
+            padding: 0;
+        }
+    }   
+}
+

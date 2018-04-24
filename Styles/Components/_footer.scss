@@ -1,13 +1,13 @@
 .footer-top {
     background-color: #1b1b1b;
     padding: 45px 0 55px 0;
+    position: relative;
     .wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .box {
         display: flex;
-        width: 33.3%;
         p {
             margin: 10px 0;
         }
@@ -18,13 +18,57 @@
         margin: auto 0;
         margin-right: 35px;
     }
-    svg {
+    .box2 {
+        position: relative;
+        & .text:before {
+        content: '';
+        background:  rgba(88, 88, 88, 0.58);
+        height: 68px;
+        width: 1px;
+        position: absolute;
+        top: 0;
+        left: -50%;
+        }
+        & .text:after {
+            content: '';
+            background:  rgba(88, 88, 88, 0.58);
+            height: 68px;
+            width: 1px;
+            position: absolute;
+            top: 0;
+            right: -50%;
+        }
+    }
+    
+    .box2 svg,
+    .box3 svg {
         color: $white;
-        background: #2f2f2f;
+        background: rgba(88, 88, 88, 0.58);
+        width: 45px;
+        height: 45px;
+        padding: 12px;
         border-radius: 50%;
         font-size: 20px;
         margin: auto 0;
         margin-right: 35px;
+    }
+    &:before {
+        content: '';
+        border-left: 25px solid transparent; 
+        border-right: 25px solid transparent; 
+        border-bottom: 25px solid #100f0f;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    svg.fa-angle-up /* Styling Bottom Arrow */{
+        color: white;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
 }
@@ -39,6 +83,7 @@
         list-style: none;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         li {
             padding: 12px;
             margin: 0 13px 30px 13px;
@@ -64,5 +109,39 @@
     }
     p span {
         color: $pink;
+    }
+}
+
+@media (max-width: 1000px) {
+    // Responsive: Moving style lines closer to middle
+    .footer-top .box2 .text:before {
+        left: -20%;
+    }
+    .footer-top .box2 .text:after {
+        right: -20%;
+    }
+    .wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 890px) {
+    // Responsive: Removing Style Lines
+    .footer-top .box2 .text:before {
+        display: none;
+    }
+    .footer-top .box2 .text:after {
+        display: none;
+    }
+    // Responsive: Stacking 3 boxes instead of having row
+    footer .wrapper {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        .box {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(88, 88, 88, 0.58);
+        }
     }
 }

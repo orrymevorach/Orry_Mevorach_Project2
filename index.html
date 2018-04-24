@@ -12,9 +12,30 @@
     <header>
         <!-- Opening Wrapper -->
         <div class="wrapper">
-        
+            
+            <!-- Hamburger Button -->
+            <input type="checkbox" id="toggle">
+
             <nav class="main-nav">
                 <img src="images/logo.png" alt="Lisbon Logo"> <!-- Image -->
+                
+                <!-- Hamburger Menu Label -->
+                <label for="toggle"> 
+                    <i class="hamburger-menu fa fa-bars" alt="Icon To Expand Menu Bar"></i>
+                </label>
+
+                <ul class="hamburger-nav__list">
+                    <li class="hamburger-nav__list__list-item"><a href="index.html">Home</a></li>
+                    <li class="hamburger-nav__list__list-item"><a href="#">About Us</a></li>
+                    <li class="hamburger-nav__list__list-item"><a href="#">Speakers</a></li>
+                    <li class="hamburger-nav__list__list-item"><a href="#">Pages</a></li>
+                    <li class="hamburger-nav__list__list-item"><a href="#">Sponsors</a></li>
+                    <li class="hamburger-nav__list__list-item"><a href="#">Blog</a></li>
+                    <li class="hamburger-nav__list__list-item"><a href="#">Venues</a></li>
+                    <li class="hamburger-nav__list__list-item"><a href="#">Contact Us</a></li>
+                    <!-- <a href="#" class="main-nav__list__link"><i class="fas fa-search"></i></a> -->
+                </ul>
+
                 <ul class="main-nav__list">
                     <li class="main-nav__list__list-item"><a href="index.html">Home</a></li>
                     <li class="main-nav__list__list-item"><a href="#">About Us</a></li>
@@ -26,9 +47,12 @@
                     <li class="main-nav__list__list-item"><a href="#">Contact Us</a></li>
                     <a href="#" class="main-nav__list__link"><i class="fas fa-search"></i></a>
                 </ul>
+
+                
             </nav>
 
             <div class="header-main">
+                <i class="fas fa-microphone"></i>
                 <p class="header__paragraph">20 - 22 June, 2018, Newyork City</p>
                 <h1 class="header-h1">World Digital Conference 2018</h1>
                 <h1 class="header-h1">Lead To Your Career</h1>
@@ -49,26 +73,38 @@
                </div>
 
                <div class="section1-middle">
-                   <div class="time">
-                       <p class="section__paragraph--numbers">1</p>
-                       <p class="section__paragraph--numbers">4</p>
-                       <p class="section__paragraph--numbers">8</p>
-                   </div>
+                   <div class="time-container">
+                        <div class="time">
+                            <p class="section__paragraph--numbers">1</p>
+                            <p class="section__paragraph--numbers">4</p>
+                            <p class="section__paragraph--numbers">8</p>
+                        </div>
+                        <p class="section__paragraph--small">Days</p>
+                    </div> <!-- Closing Time-Container -->
 
-                   <div class="time">
-                       <p class="section__paragraph--numbers">2</p>
-                       <p class="section__paragraph--numbers">5</p>
-                   </div>
+                <div class="time-container">
+                    <div class="time">
+                        <p class="section__paragraph--numbers">2</p>
+                        <p class="section__paragraph--numbers">5</p>
+                    </div>
+                    <p class="section__paragraph--small">Hours</p>
+                </div> <!-- CLosing Time Container -->
 
-                   <div class="time">
-                       <p class="section__paragraph--numbers">2</p>
-                       <p class="section__paragraph--numbers">8</p>
-                   </div>
+                   <div class="time-container">
+                    <div class="time">
+                        <p class="section__paragraph--numbers">2</p>
+                        <p class="section__paragraph--numbers">8</p>
+                    </div>
+                    <p class="section__paragraph--small">Minutes</p>
+                </div> <!-- CLosing Time Container -->
 
-                   <div class="time">
-                       <p class="section__paragraph--numbers">1</p>
-                       <p class="section__paragraph--numbers">5</p>
-                   </div>
+                   <div class="time-container">
+                    <div class="time time4">
+                        <p class="section__paragraph--numbers">1</p>
+                        <p class="section__paragraph--numbers">5</p>
+                    </div>
+                    <p class="section__paragraph--small">Seconds</p>
+                </div> <!-- CLosing Time Container -->
                </div> <!-- Closing Section1 Middle -->
 
                <div class="section1-right">
@@ -136,71 +172,74 @@
 
             <!-- Opening Box Container -->
             <div class="box-container"> 
-                
-                <div class="box">
-                    <!-- Opening Image Container -->
-                    <div class="image-container">
-                        <img src="images/speaker-1.png" alt="First Speaker">
-                        
-                        <div class="social-icons">
-                            <i class="fab fa-google-plus-g"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-facebook-f"></i>
-                        </div><!-- Closing Social Icons -->
-                    </div> <!-- Closing Image Container -->
-                
-                    <p class="section__paragraph--large">Ashley Warner</p>
-                    <p class="section__paragraph--small">CEO, Hatem Co.</p>
-                </div> <!-- Closing Box -->
-            
-            
-                <div class="box">
-                    <!-- Opening Image Container -->
-                    <div class="image-container">
-                        <img src="images/speaker-2.png" alt="First Speaker">
-                        
-                        <div class="social-icons">
-                            <i class="fab fa-google-plus-g"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-facebook-f"></i>
-                        </div><!-- Closing Social Icons -->
-                    </div> <!-- Closing Image Container -->
+                <div class="section4-top-row">
+                    <div class="box">
+                        <!-- Opening Image Container -->
+                        <div class="image-container">
+                            <img src="images/speaker-1.png" alt="First Speaker">
+                            
+                            <div class="social-icons">
+                                <i class="fab fa-google-plus-g"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-facebook-f"></i>
+                            </div><!-- Closing Social Icons -->
+                        </div> <!-- Closing Image Container -->
                     
-                    <p class="section__paragraph--large">Seth Rollins</p>
-                    <p class="section__paragraph--small">Gm, The boxtrap.</p>
-                </div> <!-- Closing Box 2 -->
+                        <p class="section__paragraph--large">Ashley Warner</p>
+                        <p class="section__paragraph--small">CEO, Hatem Co.</p>
+                    </div> <!-- Closing Box -->
+                
+                
+                    <div class="box">
+                        <!-- Opening Image Container -->
+                        <div class="image-container">
+                            <img src="images/speaker-2.png" alt="First Speaker">
+                            
+                            <div class="social-icons">
+                                <i class="fab fa-google-plus-g"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-facebook-f"></i>
+                            </div><!-- Closing Social Icons -->
+                        </div> <!-- Closing Image Container -->
+                        
+                        <p class="section__paragraph--large">Seth Rollins</p>
+                        <p class="section__paragraph--small">Gm, The boxtrap.</p>
+                    </div> <!-- Closing Box 2 -->
+                </div> <!-- Closing Section4 Top Row -->
 
-                <div class="box">
-                    <!-- Opening Image Container -->
-                    <div class="image-container">
-                        <img src="images/speaker-3.png" alt="First Speaker">
+                <div class="section4-bottom-row">
+                    <div class="box">
+                        <!-- Opening Image Container -->
+                        <div class="image-container">
+                            <img src="images/speaker-3.png" alt="First Speaker">
+                            
+                            <div class="social-icons">
+                                <i class="fab fa-google-plus-g"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-facebook-f"></i>
+                            </div><!-- Closing Social Icons -->
+                        </div> <!-- Closing Image Container -->
                         
-                        <div class="social-icons">
-                            <i class="fab fa-google-plus-g"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-facebook-f"></i>
-                        </div><!-- Closing Social Icons -->
-                    </div> <!-- Closing Image Container -->
+                        <p class="section__paragraph--large">Darcy Owens</p>
+                        <p class="section__paragraph--small">Producer, CSI:Cyber</p>
+                    </div> <!-- Closing Box 3 -->
                     
-                    <p class="section__paragraph--large">Darcy Owens</p>
-                    <p class="section__paragraph--small">Producer, CSI:Cyber</p>
-                </div> <!-- Closing Box 3 -->
-                
-                <div class="box">
-                    <!-- Opening Image Container -->
-                    <div class="image-container">
-                        <img src="images/speaker-4.png" alt="First Speaker">
+                    <div class="box">
+                        <!-- Opening Image Container -->
+                        <div class="image-container">
+                            <img src="images/speaker-4.png" alt="First Speaker">
+                            
+                            <div class="social-icons">
+                                <i class="fab fa-google-plus-g"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-facebook-f"></i>
+                            </div><!-- Closing Social Icons -->
+                        </div> <!-- Closing Image Container -->
                         
-                        <div class="social-icons">
-                            <i class="fab fa-google-plus-g"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-facebook-f"></i>
-                        </div><!-- Closing Social Icons -->
-                    </div> <!-- Closing Image Container -->
-                    
-                    <p class="section__paragraph--large">Adam Rose</p>
-                    <p class="section__paragraph--small">CCO, Bittorent</p>
-                </div> <!-- CLosing Box 4 -->
+                        <p class="section__paragraph--large">Adam Rose</p>
+                        <p class="section__paragraph--small">CCO, Bittorent</p>
+                    </div> <!-- CLosing Box 4 -->
+                </div> <!-- Closing Section4 Bottom -->
             </div> <!-- Closing Box-Container -->
 
         </section> <!-- Closing Section 4 -->
@@ -483,6 +522,7 @@
         
         <div class="footer-top">
             <div class="wrapper">
+                <i class="fas fa-angle-up"></i> <!-- Style Carrot - Position:Absolute -->
                 <div class="box box1">
                     <img src="images/location.png" alt="Icon of Location">
                     <div class="text">
@@ -505,7 +545,7 @@
                         <p class="footer__paragraph--small">Support@Lisbon.com</p>
                     </div>
                 </div>
-            </div>
+            </div> <!-- CLosing Wrapper -->
         </div> <!-- Closing Footer Top -->
 
         <div class="footer-main">

@@ -20,7 +20,12 @@
     }
     .box-container {
         display: flex;
-        justify-content: space-between;
+        .section4-top-row,
+        .section4-bottom-row {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
         .box {
             box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.03);
             text-align: center;
@@ -69,5 +74,45 @@
                 margin: 0 0 22px 0;
             }
         }
+    }
+}
+
+@media (max-width: 1060px) {
+    // Responsive: Stack top row and bottom row when size shrinks
+    .section4 .box-container {
+        flex-direction: column;
+    }
+    .section4.wrapper {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .section4 .box-container .section4-top-row,
+    .section4 .box-container .section4-bottom-row, {
+        width: 100%;
+    }
+    // Add Margin between pictures
+    .section4 .box .image-container img {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+    .section4 .box .image-container img {
+        max-width: 175px;
+    }
+}
+
+@media (max-width:800px) {
+    // Responsive: Shrink space above header
+    .section4 .section__title h2 {
+        margin-top: 60px;
+    }
+    // Responsive: Remove red style line so doesnt interfere with text
+    .section4 .section__title:after {
+        display: none;
+    }
+    // Shrink space below italic text
+    .section4 .section__title p {
+        margin-bottom: 50px;
     }
 }
