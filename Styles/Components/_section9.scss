@@ -23,3 +23,21 @@
         margin-left: 5px;
     }
 }
+
+@media (max-width: 900px) {
+    .section9 .wrapper {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .section9 {
+        padding: 60px;
+        input[type=email] {
+            width: 60%;
+        }
+        input[type=submit] {
+            width: 20%;
+            margin: 0 auto;
+            padding: 0 ;
+        }
+    }
+}

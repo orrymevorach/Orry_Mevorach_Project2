@@ -1,20 +1,35 @@
 .section8 {
+    padding-top: 115px;
+    .section__h2--dark {
+        margin: 0;
+    }
+    .section__paragraph--italic {
+        margin: 0;
+        position: relative;
+        &:after {
+            content: '';
+            background-color: red;
+            width: 65px;
+            height: 1px;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
     .box-container {
         margin-top: 70px;
-        .section__row1,
-        .section__row2 {
-            display: flex;
-        }
-        .section__row1 {
-            margin-bottom: 2%;
-        }
+        display: flex;
+        flex-wrap: wrap;
         img {
             display: block;
         }
         .box {
-            height: 300px;
-            max-width: 370px;
             position: relative;
+            max-width: 370px;
+            margin: 10px;
+            
+            // Styling Text Within Boxes
             .section__paragraph--large {
                 margin: 0 0 5px 0;
                 padding-top: 35px;
@@ -27,15 +42,13 @@
             }
            
         }
-        .box2,
-        .box5 {
-            margin: 0 2%;
-        }
+        // Additional Styling For Boxes With Text
         .box2, 
         .box4,
         .box6 {
             background: #fafafa;
-            padding-left: 20px;;
+            padding: 0 0px 50px 20px;
+            // Stylistic Pseudo Lines
              &:after {
                 content: '';
                 background: $grey;
@@ -46,17 +59,47 @@
                 left: 20px;
             }
         }
+        // Styling Facebook Box
         .box5 {
-            .facebook {
-                background: red;
-                margin-bottom: 100px;
-                width: 100%;
+            width: 100%;
+            // Styling Top Section Of Box
+            .top {
+                background-color: $purple;
+                height: 140px;
+                width: 360px;
+                text-align: center;
+                padding-top: 15%;
             }
-            .button {
-                
+            //  Styling Text in Top Section Of Box
+            .facebook {
+                color: white;
+                text-decoration: none;
+            }
+            // Styling Bottom Section of Box
+            .bottom {
+                margin-top: 80px;
             }
         }
-    }
-
-        
+    }        
 }
+
+@media (max-width:1190px) {
+    .section8 .box-container .column1,
+    .section8 .box-container .column2,
+    .section8 .box-container .column3 {
+        display: flex;
+        margin: auto;
+    }
+    .section8.wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 730px) {
+    .section8 .box-container .column1,
+    .section8 .box-container .column2,
+    .section8 .box-container .column3 {
+        flex-direction: column;
+    }
+}
+

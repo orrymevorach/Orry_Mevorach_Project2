@@ -25,6 +25,7 @@
         margin-top: 95px;
         aside {
             width: 24%;
+            margin-right: 30px;
             ul {
                 margin-top: 50px;
                 li {
@@ -63,6 +64,8 @@
         .section6-main {
             width: 66%;
             margin: 0 auto;
+            padding-left: 50px;
+            border-left: 1px dashed $grey;
             .box {
                 display: flex;
                 .text-container {
@@ -90,14 +93,88 @@
                     border: 8px solid #ececec;
                     position: relative;
                 }
-                &:before {
-                    content: '';
-                    background: red;
-                    height: 1px;
-                    width: 100px;
-                    position: absolute;
+                .image-container {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        border-bottom: 1px dashed $grey;
+                        width: 50px;
+                        position: absolute;
+                        top: 25%;
+                        left: -50px;
+                    }
+                    .mask1,
+                    .mask3 {
+                        width: 10px;
+                        height: 50px;
+                        background-color: #fafafa;
+                        position: absolute;
+                        left: -55px;
+                        z-index: 2;
+                    }
+                    .mask1 {
+                        top: 0;
+                    }
+                    .mask3 {
+                        bottom: 0;
+                        height: 153px;
+                    }
                 }
             }
         }
     }
 }
+
+@media (max-width: 1150px) {
+    // Resizing masks to cover up right amount of border
+    .section6 .section6-container .section6-main .box .image-container .mask1 {
+        height:56px;
+    }
+    .section6 .section6-container .section6-main .box .image-container .mask3 {
+        height: 168px;
+    }
+}
+
+@media (max-width: 910px) {
+    // Responsive: Removing style lines and masks next to each image
+    .section6 .section6-container .section6-main .box .image-container .mask1,
+    .section6 .section6-container .section6-main .box .image-container .mask3,
+    .section6 .section6-container .section6-main .box .image-container:before {
+        display: none;
+    }
+    // Responsive: Removing Border Left From Main Container
+    .section6 .section6-container .section6-main {
+        border: none;
+        padding: 0 10px;
+        margin: 0;
+        width: 100%;
+    }
+    // Responsive: Removing padding top from wrapper
+    .section6 .wrapper {
+            padding-top: 80px;
+    }
+    // Responsive: Removing space between title and aside
+    .section6 .section6-container {
+            flex-direction: column;
+            margin-top: 0px;
+    }
+
+    // Responsive: Making Aside Responsive
+    .section6 .section6-container aside {
+        margin: 0 auto;
+        margin-bottom: 50px;
+        width: 50%;
+        text-align: center;
+        padding: 0;
+        ul .aside__list__list-item--paragraph--large {
+            padding: 5px 0 5px 0;
+        }
+        ul .aside__list__list-item__paragraph--small {
+            padding: 10px 0 5px 0;
+        }
+    }
+    .section6 .section__title:after {
+        display: none;
+    }
+}
+
