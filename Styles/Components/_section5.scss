@@ -1,12 +1,11 @@
 .section5 {
-    margin-top: 210px;
-    background-image: url(../../images/pricing-image.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 120%;
-    min-height: 540px;
-    margin-bottom: 500px;
+    // Styling Background
+    margin: 110px 0 60px 0;
+    // Styling Main Text
     .section__title {
+        background-image: url(../images/pricing-image.png);
+        background-repeat: no-repeat;
+        background-position: center;
         color: white;
         padding: 140px;
         h2 {
@@ -19,15 +18,17 @@
     .wrapper {
         position: relative;
     }
+    // Styling Large Container Holding All Boxes
     .box-container {
         display: flex;
         background: white;
         padding: 20px;
         justify-content: space-between;
-        position: absolute;
-        top: 300px;
+        position: relative;
+        top: -50px;
         width: 100%;
         box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.04);
+        // Styling Each Individual Box
         .box {
             background: #fafafa;
             padding-bottom: 50px;
@@ -35,6 +36,7 @@
             border: 1px solid #ececec;
             position: relative; 
             overflow: hidden;
+            // Styling Best Choice Banner
             .section__paragraph--best-choice {
                 position: absolute;
                 top: 15px;
@@ -48,13 +50,14 @@
                 font-weight: 500;
                 padding-top: 8px;;
             }
-
+            // Styling Text Within Each Box
             h3 {
                 margin: 55px 0 0 0;
             }
             .section__paragraph--small {
                 margin: 8px 0 40px 0;
             }
+            // Styling Style Line Under Box Main Text
             &:after {
                 content: '';
                 background: black;
@@ -65,73 +68,104 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
+            // Styling Money Span
             .section__paragraph--money {
                 margin: 0 0 15px 0;
-                position: relative; /* For Dollar Sign */
+                // Styling Dollar Sign Span
                 .section__paragraph--dollar-sign {
-                    position: absolute;
-                    top: 5px;
-                    left: 95px;
+                    position: relative;
+                    top: -10px;
                 }
             }
+            // Adding Dashed Lines and Padding between List Items
             .section__paragraph--large {
                 margin: 0;
                 border-top: 1px dashed #ececec;
                 padding: 15px 60px;
             }
+            // Removing Style from Last List Item
             .section__paragraph--large:last-of-type {
                 margin-bottom: 30px;
             }
+            // Styling Button
             .button {
                 padding: 15px 45px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1085px) {
+    // Responsive: Remove Margin Top
+    .section5 {
+        margin-top: 0px;
+        // Reduce Font Size and Padding Around Text
+        .box-container .box {
+            .section__paragraph--large {
+                font-size: 13px;
+                padding: 15px 40px;
+            }
+            .section__paragraph--price {
+                font-size: 27px;
+            }
+            .section__h3 {
+                font-size: 16px;
+            }
+            // Reduce Padding Around BUtton
+            .button {
+                padding: 10px 25px;
+            }
+        }
+    }
+}
+
+@media (max-width:900px) {
+    // Shrinking Text and Padding
+    .section5 {
+        .section__title {
+            padding: 140px 0;
+        }
+        .box-container {
+            .box {
+                .section__paragraph--large {
+                    font-size: 12px;
+                    padding: 15px 30px;
+                }
+                // Shrinking Price
+                .section__paragraph--price {
+                    font-size: 25px;
+                }
+                .section__h3 {
+                    font-size: 15px;
+                }
+                // Shrinking Padding around Button
+                .button {
+                    padding: 10px 25px;
+                }
+                .section__paragraph--money .section__paragraph--dollar-sign {
+                    top: -5px;
+                }
             }
         }
     }
     
 }
 
-@media (max-width: 1085px) {
-    .section5 .box-container .box {
-        .section__paragraph--large {
-            font-size: 13px;
-            padding: 15px 40px;
-        }
-        .section__paragraph--price {
-            font-size: 27px;
-        }
-        .section__h3 {
-            font-size: 16px;
-        }
-        .button {
-            padding: 10px 25px;
-        }
-        // Responsive: Shrinking Best Choice Banner
-        .section__paragraph--best-choice {
-
-        }
+@media (max-width: 550px) {
+    // Shrinking Padding around Button
+    .section5 
+    .wrapper {
+        width: 75%;
     }
-}
-
-@media (max-width:900px) {
-    .section5 .box-container .box {
-        .section__paragraph--large {
-            font-size: 12px;
-            padding: 15px 30px;
+    // Rearranging Boxes In A Column
+    .box-container {
+        display: flex;
+        flex-direction: column;
+        .box {
+            margin-bottom: 25px;
+            .button {
+                padding: 5px 15px;
+            }
         }
-        .section__paragraph--price {
-            font-size: 25px;
-        }
-        .section__h3 {
-            font-size: 15px;
-        }
-        .button {
-            padding: 10px 25px;
-        }
-    }
-}
-
-@media (max-width: 505px) {
-    .section5 .box-container .box .button {
-        padding: 5px 15px;
     }
 }

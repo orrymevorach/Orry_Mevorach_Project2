@@ -29,6 +29,7 @@
                     padding: 6px 15px;
                     height: 45px;
                 }
+                // Adding Colons Between Time Boxes
                 &:after {
                     content: ':';
                     position: absolute;
@@ -44,9 +45,11 @@
     }
     .section1-right {
         display: flex;
+        // Styling Buttons
         .button {
             height: 52px;
             padding: 15px 50px;
+            // Moving Purple Button Over
             &--pink {
                 margin-left: 15px;
             }
@@ -55,22 +58,26 @@
 }
 
 @media (max-width: 1070px) {
+    // Responsive: Reduce Padding On Entire Section
     .section1 {
         padding: 50px 0;
     }
+    // Shrink numbers in black boxes
     .section1 .section1-middle .time-container .time .section__paragraph--numbers {
     padding: 0px 10px;
     height: 28px;
     font-weight: 500;
     margin-top: 20px;
     }
+    // Shrink buttons
     .section1 .section1-right .button {
         padding: 9px 30px;
         height: 40px;
         margin-top: 20px;;
     }
+    // Shrink Rest of Text
     .section1 .section__paragraph--large {
-        font-size: 22px;
+        font-size: 30px;
     }
     .section1 .section__paragraph--small {
         font-size: 12px;
@@ -82,10 +89,12 @@
 }
 
 @media (max-width: 940px) {
+    // Resize Wrapper and Center
     .section1 .wrapper {
         flex-direction: column;
         max-width: 80%;
         margin: 0 auto;
+        // Center All Text
         & .section1-left {
             text-align: center;
         }

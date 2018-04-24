@@ -1,16 +1,16 @@
 header {
-    background: url(../../images/main-image.png);
+    background: url(../images/main-image.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 110vh;
     padding-bottom: 240px;
 }
-
+//  Styling Main Navigation w/out Media Queries
 .main-nav {
     display: flex;
     padding: 10px 0 0 0;
     position: relative;
+    // Top Stylistic Line
     &::before {
     content: "";
     background: rgba(255, 255, 255, 0.22);
@@ -19,6 +19,7 @@ header {
     position: absolute;
     top: 100px;
     }
+    // Bottom Stylistic Line
     &::after {
     content: "";
     background: rgba(255, 255, 255, 0.22);
@@ -27,49 +28,11 @@ header {
     position: absolute;
     top: 103px;
     }
-   
-    
-    // Responsive: Styling Hamburger Menu + Hiding Main Nav
-    @media (max-width: 860px) {
-        .main-nav__list {
-            display: none;
-        }
-        &::before,
-        &::after {
-            display: none;
-        }
-        .hamburger-menu {
-            color: white;
-            font-size: 40px;
-            display: block;
-            position: absolute;
-            right: 25px;
-            top: 25px;
-            transition: all 0.3s;
-        }
-        .hamburger-nav__list {
-            display: block;
-            list-style: none;
-            background: rgba(0,0,0,0.7);
-            margin: 0;
-            padding: 0;
-            width: 30%;
-            position: absolute;
-            top: 20px;
-            right: -100%;
-            transition: all 0.3s;
-            li {
-                padding: 15px 25px;
-                text-align: center;
-                border: 1px solid $purple;
-                a {
-                color: white;
-                text-decoration: none;
-                }
-            }
-        }
+    // Hiding Hamburger Menu Icon
+    .hamburger-menu {
+        display: none;
     }
-    // Styling Main Nav List
+    // Styling Main Nav List & List Items
     &__list {
         display: flex;
         padding: 0;
@@ -89,6 +52,7 @@ header {
             border-radius: 3px;
             }
         }
+        // Styling Search Button
         &__link {
             background: $pink;
             color: white;
@@ -96,35 +60,20 @@ header {
             height: 44px;
             border-radius: 50%;
             margin-top: -10px;
+            // Styling Magnifying Icon
             svg {
                 font-size: 18px;
                 margin: 12px 0 0 12px;
             }
         }
-        // Reponsive: Making Main Nav Text Shrink
-        @media (max-width: 1050px) {
-            &__list-item a {
-                padding: 4px 8px;
-                font-size: 12px;
-            }
-            &__link {
-                width: 33px;
-                height: 33px;
-                margin: -5px;
-                svg {
-                    margin: 10px 0 0 10px;
-                    font-size: 12px;
-                }
-            }
-        }
-
     }
 }
 
 // Styling Header Text
 .header-main {
     text-align: center;
-    padding-top: 200px;
+    padding-top:200px;
+    // Styling Microphone Icone
     svg {
         color: white;
         font-size: 30px;
@@ -140,17 +89,9 @@ header {
             margin-bottom: 55px;
         }
     }
+    // Styling Button
     .button--pink {
         padding: 20px 60px;
-    }
-    // Responsive: Shrinking Header Main Text
-    @media (max-width: 850px) {
-        .header__paragraph {
-            font-size: 15px;
-        }
-        .header-h1 {
-            font-size: 30px;
-        }
     }
 }
 
@@ -170,4 +111,79 @@ input#toggle:checked {
     }
 }
 
+// Reponsive: Making Main Nav Text Shrink
+@media (max-width: 1050px) {
+    .main-nav__list__list-item a {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    .main-nav__list__list-item__link {
+        width: 33px;
+        height: 33px;
+        margin: -5px;
+        svg {
+            margin: 10px 0 0 10px;
+            font-size: 12px;
+        }
+    }
+}
 
+// Responsive: Styling Hamburger Menu + Hiding Main Nav
+@media (max-width: 880px) {
+    // Reduce Padding on Header
+    header {
+        padding-bottom: 140px; 
+    }
+    // Hiding Main Navigation
+    header .main-nav .main-nav__list {
+        display: none;
+    }
+    // Hiding Style Lines
+    &::before,
+    &::after {
+        display: none;
+    }
+    // Displaying and Styling Hamburger Icon
+    header .main-nav .hamburger-menu {
+        color: white;
+        font-size: 40px;
+        display: block;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        transition: all 0.3s;
+    }
+    // Displaying and Styling Hamburger Navigation
+    header .main-nav .hamburger-nav__list {
+        display: block;
+        list-style: none;
+        background: rgba(0,0,0,0.7);
+        margin: 0;
+        padding: 0;
+        width: 30%;
+        position: absolute;
+        top: 20px;
+        right: -100%;
+        transition: all 0.3s;
+        li {
+            padding: 15px 25px;
+            text-align: center;
+            border: 1px solid $purple;
+            a {
+            color: white;
+            text-decoration: none;
+            }
+        }
+    }
+    // Responsive: Shrinking Header Main Text and Padding
+    .header__paragraph {
+        font-size: 15px;
+    }
+    .header-h1 {
+        font-size: 30px;
+    }
+    .header-main {
+        padding-top: 120px;;
+    }
+}
+    
