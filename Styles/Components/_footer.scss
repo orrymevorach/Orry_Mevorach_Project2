@@ -96,8 +96,12 @@
         li {
             padding: 12px;
             margin: 0 13px 30px 13px;
-            &:hover {
-                color: $white;
+            // Hover Effect for list items
+            &:nth-child(even):hover {
+                color: $pink;
+            }
+            &:nth-child(odd):hover {
+                color: $purple;
             }
             // Removing Margin from First List Item
             &:first-of-type {

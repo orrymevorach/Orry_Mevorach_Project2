@@ -65,8 +65,12 @@
                     left: 0;
                 }
                 // Hover Effect for List Items
-                li:hover {
+                li:nth-child(even):hover {
                     background: $pink;
+                    color: white;
+                }
+                li:nth-child(odd):hover {
+                    background: $purple;
                     color: white;
                 }
             }
