@@ -1,12 +1,15 @@
 .section4 {
     .section__title {
         position: relative;
+        // Spacing above header text
         h2 {
         margin: 130px 0 0 0;
         }
+        // Spacing below italic title text
         p {
         margin: 0 0 90px 0;
         }
+        // Pink Style Line
         &:after {
             content: '';
             background: $pink;
@@ -18,14 +21,17 @@
             transform: translateX(-50%);
         }
     }
+    // Arranging Containers In A Row
     .box-container {
         display: flex;
+        // Arranging Images Within Containers In A Row
         .section4-top-row,
         .section4-bottom-row {
             display: flex;
             justify-content: space-around;
             width: 50%;
         }
+        // Styling Each Box
         .box {
             box-shadow: 2px 4px 18px 0px rgba(0, 0, 0, 0.03);
             text-align: center;
@@ -33,11 +39,13 @@
             border-bottom-right-radius: 5px;
             .image-container {
                 position: relative;
+                // Styling Images
                 img {
                     display: block;
                     border-top-left-radius: 5px;
                     border-top-right-radius: 5px;
                 }
+                // Styling FontAwesome Hover Icons
                 .social-icons svg {
                     display: none;
                     color: white;
@@ -59,20 +67,50 @@
                 }
                 .svg-inline--fa.fa-facebook-f {
                     right: 30%;
-                } 
+                }
+                // Hover Instructions for Icons
                 .social-icons svg:hover {
                     background: $pink;
                 }
             }
+            // Hover Display Instrctions for Icons
             .image-container:hover .social-icons svg {
                 display: block;
             }
+            // Hover Instructions for background of text container
+            .text-container:hover,
+            .image-container:hover + .text-container {
+                background: $purple;
+            }
+            // Hover Instructions for color change large text
+            .text-container:hover > .section__paragraph--large,
+            .image-container:hover + .text-container .section__paragraph--large {
+                color: white;
+            }
+            // Hover Instructions for color change small text
+            .text-container:hover > .section__paragraph--small,
+            .image-container:hover + .text-container .section__paragraph--small {
+                color: #a6a0e3;
+            }
+            // Style Border Radius on Text Container
+            .text-container {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            // Spacing Around Text
             .section__paragraph--large {
-                margin: 22px 0 0 0;
+                padding: 22px 0 0 0;
+                margin: 0;
             }
+            // Padding and margin around text
             .section__paragraph--small {
-                margin: 0 0 22px 0;
+                padding: 0 0 22px 0;
+                margin: 0;
             }
+        }
+        // Add Box Shadow Effect on Hover to Boxes
+        .box:hover {
+            box-shadow: 0px 2px 3px;
         }
     }
 }
@@ -82,10 +120,12 @@
     .section4 .box-container {
         flex-direction: column;
     }
+    // Resize Wrapper
     .section4.wrapper {
         max-width: 80%;
         margin: 0 auto;
     }
+    // Expanding Width of each Row Container
     .section4 .box-container .section4-top-row,
     .section4 .box-container .section4-bottom-row, {
         width: 100%;
@@ -96,12 +136,6 @@
     }
 }
 
-@media (max-width: 540px) {
-    .section4 .box .image-container img {
-        max-width: 175px;
-    }
-}
-
 @media (max-width:800px) {
     // Responsive: Shrink space above header
     .section4 .section__title h2 {
@@ -109,10 +143,31 @@
     }
     // Responsive: Remove red style line so doesnt interfere with text
     .section4 .section__title:after {
-        display: none;
+       top: 120px;
     }
     // Shrink space below italic text
     .section4 .section__title p {
         margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 540px) {
+    // Shrink IMage Size
+    .section4 .box .image-container img {
+        max-width: 175px;
+    }
+}
+
+@media (max-width: 480px) {
+    // Responsive: Remove red style line so doesnt interfere with text
+    .section4 .section__title:after {
+       top: 180px;
+    }
+}
+
+@media (max-width: 410px) {
+    // Responsive: Remove red style line so doesnt interfere with text
+    .section4 .section__title:after {
+       top: 200px;
     }
 }

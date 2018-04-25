@@ -1,61 +1,97 @@
 .section7 {
     background: #463f8c;
+    // Add padding, arrange containers in a row
     .wrapper {
         padding: 150px;
         display: flex;
-        }
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            img {
-                border-radius: 50%;
-                height: 66px;
-                margin-bottom: 30px;
-            }
-            
-            img:hover {
-                box-shadow: 0 0 0 5px $white;
-            }
-            
-            .section__image--1:hover + .text-container1,
-            .section__image--2:hover + .text-container2,
-            .section__image--3:hover + .text-container3,
-            .section__image--4:hover + .text-container4 {
-                display: block;
-            }
-            
-            .text-container {
-                // display: none;
-                position: absolute;
-                top: 0;
-                left: 160px;
-                min-width: 460px;
-                svg {
-                    color: white;
-                    position: absolute;
-                    width: 30px;
-                    font-size: 30px;
-                    top: 0;
-                    left: -50px;
-                }
-                p {
-                    line-height: 30px;
-                }
-            }
-
-            h3 {
-                margin: 0 0 30px 0;
-            }
-            .author-container {
-                display: flex;
-                margin-top: 20px;
-            }
-        }
-        
-
-        
-
-
-        
     }
+        // Arrange images within container in a column
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        // Sizing Images
+        img {
+            border-radius: 50%;
+            height: 66px;
+            width: 66px;
+            margin-bottom: 30px;
+        }
+        // Adding Border to Images on Hover
+        img:hover {
+            box-shadow: 0 0 0 5px $white;
+        }
+        
+        // Reveal approrpiate quote based on author when hovered over
+        .section__image--1:hover + .text-container1,
+        .section__image--2:hover + .text-container2,
+        .section__image--3:hover + .text-container3,
+        .section__image--4:hover + .text-container4 {
+            z-index: 1;
+        }
+    }
+    // Stlye Text Container
+    .text-container {
+        background: #463f8c; /* Background for each text container to allow for overlap */
+        position: absolute; /* Position Text Next to Images */
+        top: 0;
+        left: 160px;
+        min-width: 460px;
+        // Fontawesome Smart Quote
+        svg {
+            color: white;
+            position: absolute;
+            width: 30px;
+            font-size: 30px;
+            top: 0;
+            left: -50px;
+        }
+        p {
+            line-height: 30px;
+        }
+    }
+
+    h3 {
+        margin: 0 0 30px 0;
+    }
+    // Arrange Author Text Containers in a row and add margin
+    .author-container {
+        display: flex;
+        margin-top: 20px;
+    }
+}
+
+// Resize Wrapper and decrease padding
+@media (max-width: 870px) {
+    .section7 .wrapper {
+        padding: 50px 0;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    // Increase Size of Wrapper
+    .section7 .wrapper {
+        max-width: 90%;
+    }
+    // Shrink Text Container, Move it Left
+    .section7 .text-container {
+        left: 120px;
+        min-width: 280px;
+    }
+    // Decrease Font Size
+    .section7 .section__h3 {
+        font-size: 25px;
+    }
+    .section7 .section__paragraph--italic,
+    .section7 .section__paragraph--small {
+        font-size: 14px;
+    }
+    .section7 .text-container svg {
+        font-size: 18px;
+    }
+    
+
+}

@@ -10,6 +10,7 @@ header {
     display: flex;
     padding: 10px 0 0 0;
     position: relative;
+    transition: all 0.3s;
     // Top Stylistic Line
     &::before {
     content: "";
@@ -68,7 +69,6 @@ header {
         }
     }
 }
-
 // Styling Header Text
 .header-main {
     text-align: center;
@@ -102,16 +102,41 @@ input#toggle,
     display: none;
 }
 
-// Instructions for Nav when clicking Hamburger Menu
-input#toggle:checked {
-    & + nav .hamburger-nav__list{
-        transform: translatex(-100%);
-        display: block;
-    }
-    & + nav svg {
-        margin-right: 250px;
+// Displaying and Styling Hamburger Icon
+header .main-nav .hamburger-menu {
+    color: white;
+    font-size: 40px;
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    transition: all 0.3s;
+    display: none;
+}
+
+// Styling Hamburger Nav and Display: None.
+header .wrapper .main-nav .hamburger-nav__list {
+    list-style: none;
+    background: rgba(0,0,0,1);
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    position: absolute;
+    top: 20px;
+    transition: all 0.3s;
+    display: none;
+    li {
+        padding: 15px 25px;
+        text-align: center;
+        border: 1px solid $purple;
+        a {
+        color: white;
+        text-decoration: none;
+        }
     }
 }
+
+
 
 // Reponsive: Making Main Nav Text Shrink
 @media (max-width: 1050px) {
@@ -130,7 +155,6 @@ input#toggle:checked {
     }
 }
 
-// Responsive: Styling Hamburger Menu + Hiding Main Nav
 @media (max-width: 880px) {
     // Reduce Padding on Header
     header {
@@ -145,38 +169,6 @@ input#toggle:checked {
     header .main-nav:after {
         display: none;
     }
-    // Displaying and Styling Hamburger Icon
-    header .main-nav .hamburger-menu {
-        color: white;
-        font-size: 40px;
-        display: block;
-        position: absolute;
-        right: 25px;
-        top: 25px;
-        transition: all 0.3s;
-    }
-    // Displaying and Styling Hamburger Navigation
-    header .main-nav .hamburger-nav__list {
-        display: none;
-        list-style: none;
-        background: rgba(0,0,0,1);
-        margin: 0;
-        padding: 0;
-        width: 30%;
-        position: absolute;
-        top: 20px;
-        // right: -100%;
-        transition: all 0.3s;
-        li {
-            padding: 15px 25px;
-            text-align: center;
-            border: 1px solid $purple;
-            a {
-            color: white;
-            text-decoration: none;
-            }
-        }
-    }
     // Responsive: Shrinking Header Main Text and Padding
     .header__paragraph {
         font-size: 15px;
@@ -186,6 +178,24 @@ input#toggle:checked {
     }
     .header-main {
         padding-top: 120px;;
+    }
+    // Show Hamburger Menu Icon
+    header .main-nav .hamburger-menu {
+        display: block;
+    }
+    // Instructions for when clicking Hamburger Menu
+    input#toggle:checked {
+        & + header > .wrapper > nav .hamburger-nav__list{
+            transform: translatex(-110%);
+            display: block;
+        }
+        & + header > .wrapper > nav svg {
+            margin-right: 35%;
+        }
+        & + header > .wrapper .header-main{
+            position: relative;
+            right: 25%;
+        }
     }
 }
     

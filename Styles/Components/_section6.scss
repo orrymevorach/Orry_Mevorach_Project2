@@ -23,9 +23,11 @@
             transform: translateX(-50%);
     }
 
+    // Arranging Aside and Container In A Row and Adding Top Margin
     .section6-container {
         display: flex;
         margin-top: 95px;
+        // Sizing Aside
         // Sizing Aside
         aside {
             width: 24%;
@@ -69,31 +71,40 @@
                 }
             }
         }
+        // Sizing Main Container
         .section6-main {
             width: 66%;
             margin: 0 auto;
             padding-left: 50px;
             border-left: 1px dashed $grey;
+            // Arranging Items In A Row
             .box {
                 display: flex;
+                // Adding Margin to Text Container
                 .text-container {
                     margin-left: 30px;
+                    // Arranging top line of text in a row
                     .name-time-container {
                         display: flex;
+                        // Adding left margin to time text
                         .section__paragraph--dark {
                             margin:0 0 0 20px;
                         }
+                        // Removing margin from name text
                         .section__paragraph--bold {
                             margin: 0;
                         }
                     }
+                    // Adding margin to second line of text
                     .section__paragraph--large {
                         margin: 15px 0;
                     }
+                    // Add bottom margin to bottom line of text
                     .section__paragraph--light {
                         margin: 0 0 60px 0;
                     }
                 }
+                // Sizing Image
                 img {
                     height: 110px;
                     width: 110px;
@@ -183,9 +194,20 @@
             padding: 10px 0 5px 0;
         }
     }
-    // Removing Style Line
+    // Moving Style Line To Account for Line Shift
+    .section6 .section__title:after {
+        top: 180px;
+    }
+}
+// Moving Style Line To Account for Line Shift
+@media (max-width: 620px) {
+    .section6 .section__title:after {
+        top: 210px;
+    }
+}
+// Removing Style Line To Account for Line Shift at tiny screen sizes
+@media (max-width: 325px) {
     .section6 .section__title:after {
         display: none;
     }
 }
-
