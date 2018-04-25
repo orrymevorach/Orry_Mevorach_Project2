@@ -92,6 +92,11 @@
                 padding: 15px 45px;
             }
         }
+        // Adding Hover to Boxes
+        .box:hover {
+            box-shadow: 0px 0px 1px 1px $purple;
+        }
+        
     }
 }
 
