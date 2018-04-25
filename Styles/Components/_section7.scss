@@ -3,6 +3,7 @@
     .wrapper {
         padding: 150px;
         display: flex;
+        }
         .image-container {
             display: flex;
             flex-direction: column;
@@ -25,7 +26,7 @@
             }
             
             .text-container {
-                display: none;
+                // display: none;
                 position: absolute;
                 top: 0;
                 left: 160px;
@@ -51,10 +52,10 @@
                 margin-top: 20px;
             }
         }
+        
 
         
 
 
         
     }
-}

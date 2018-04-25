@@ -1,20 +1,27 @@
 .section3 {
+    // Main Styles for Entire Section
     background: $purple;
     color: white;
     text-align: center;
+    // Separating Section from Above Section
     margin-top: 100px;
+    // Adding padding to top of section
     & .wrapper {
         padding: 110px 0;
+        // Removing Margin from Header Text
         & .section__h2--light {
             margin: 0;
         }
+        // Adding Maring to Paragraph Text
         & .section__paragraph {
             margin: 11px 0 34px 0;
         }
+        // Arranging Form Elements In A Row and Centering
         form {
             display: flex;
             justify-content: center;
         }
+        // Styling Email Input
         input[type=email] {
             background: $purple;
             border: 1px solid $white;
@@ -27,6 +34,7 @@
             color: $white;
             position: relative;
         }
+        // Styling Submit Button
         input[type=submit] {
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
@@ -39,24 +47,29 @@
 }
 
 @media (max-width: 950px) {
+    // Resizing Wrapper for Responsiveness
     .section3 .wrapper {
         width: 90%;
         margin: 0 auto;
         padding: 50px 0;
     }
+    // Shrinking Paragraph Text
     .section__paragraph {
         font-size: 12px;
     }
+    // Shrinking Email Input
     .section3 .wrapper {
         input[type=email] {
             height: 40px;
             margin: 0;
             width: 50%;
         }
+        // Shrinking Submit Button
         input[type=submit] {
             height: 40px;
             padding: 0 20px;
         }
+        // Removing Margin and Padding from Entire Form
         form {
             margin: 0;
             padding: 0;

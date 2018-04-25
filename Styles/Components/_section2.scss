@@ -1,6 +1,4 @@
 .section2 {
-    // position: relative; /* For Style Line Under Title */
-
     // Adding Padding to Title Section
     .section__title {
         padding: 145px 0 0 0;
@@ -12,6 +10,7 @@
         .section__paragraph--italic {
             margin: 0;
         }
+        // Adding Pink Style Line Under Title
         .section__paragraph--italic:after {
             content: '';
             background-color: $pink;
@@ -23,8 +22,8 @@
             transform: translatex(-50%);
         }
     }
+    // Arranging Boxes in a row
     .section__boxes {
-        // Arranging Boxes in a row
         display: flex;
         padding-top: 85px;
         // Adding box shadow and margin to boxes
@@ -59,7 +58,7 @@
 }
 
 @media (max-width: 1150px) {
-    // Shrink Image 
+    // Shrink Image when screen being resized
     .section2 .section__boxes .box {
         img {
             max-width: 300px;
@@ -85,6 +84,10 @@
                 padding: 20px;
             }
         }
+    }
+    // Responsive: Shrink Padding On Title 
+    .section2 .section__title {
+        padding-top: 80px;
     }
     // Resizing Wrapper for Responsiveness
     .section2.wrapper {

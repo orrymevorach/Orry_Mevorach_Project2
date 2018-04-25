@@ -59,7 +59,7 @@ header {
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            margin-top: -10px;
+            margin: -10px 15px 0 0;
             // Styling Magnifying Icon
             svg {
                 font-size: 18px;
@@ -73,7 +73,7 @@ header {
 .header-main {
     text-align: center;
     padding-top:200px;
-    // Styling Microphone Icone
+    // Styling Microphone Icon
     svg {
         color: white;
         font-size: 30px;
@@ -98,13 +98,15 @@ header {
 // Hiding Hamburger Icon and Popout Nav
 input#toggle,
 .hamburger-nav__list {
-	display: none;
+    right: -30%;
+    display: none;
 }
 
 // Instructions for Nav when clicking Hamburger Menu
 input#toggle:checked {
     & + nav .hamburger-nav__list{
-        right: 20px;
+        transform: translatex(-100%);
+        display: block;
     }
     & + nav svg {
         margin-right: 250px;
@@ -139,8 +141,8 @@ input#toggle:checked {
         display: none;
     }
     // Hiding Style Lines
-    &::before,
-    &::after {
+    header .main-nav:before,
+    header .main-nav:after {
         display: none;
     }
     // Displaying and Styling Hamburger Icon
@@ -155,15 +157,15 @@ input#toggle:checked {
     }
     // Displaying and Styling Hamburger Navigation
     header .main-nav .hamburger-nav__list {
-        display: block;
+        display: none;
         list-style: none;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0,0,0,1);
         margin: 0;
         padding: 0;
         width: 30%;
         position: absolute;
         top: 20px;
-        right: -100%;
+        // right: -100%;
         transition: all 0.3s;
         li {
             padding: 15px 25px;
