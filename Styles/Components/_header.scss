@@ -153,6 +153,7 @@ header .wrapper .main-nav .hamburger-nav__list {
     top: 20px;
     transition: all 0.3s;
     display: none;
+    // Styling List Items
     li {
         padding: 15px 25px;
         text-align: center;
@@ -161,6 +162,15 @@ header .wrapper .main-nav .hamburger-nav__list {
         color: white;
         text-decoration: none;
         }
+    }
+    // Styling Search Bar In Popout Hamburger Nav
+    input[type=search] {
+        width: 96%;
+        height: 40px;
+        background-color: rgba(0,0,0,0.5);
+        color: $white;
+        text-align: center;
+        border: 2px solid $pink;
     }
 }
 

@@ -463,6 +463,13 @@ header .wrapper .main-nav .hamburger-nav__list {
     header .wrapper .main-nav .hamburger-nav__list li a {
       color: white;
       text-decoration: none; }
+  header .wrapper .main-nav .hamburger-nav__list input[type=search] {
+    width: 96%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    border: 2px solid #e85889; }
 
 header .wrapper .main-nav .hamburger-nav__list li:hover {
   border: 1px solid #ffffff; }
